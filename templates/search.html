@@ -1,0 +1,82 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block content %}
+<br>
+<h2>Candidate/Committee Search</h2>
+	<div class="candSearchleft">
+		<h3>Candidate Search</h3>
+		<img class="searchImg" src="{% static 'Muqrakr/candidate_search.jpg' %}" alt="candidate_search" width="475" height="380">
+		<p>Look up a candidate by <i>first</i> or <i>last</i> name:</p>
+			<select id="yearCandSearchselect">
+				<option value="Select Election Year">Select Election Year</option>
+				<option value="2020">2020</option>
+				<option value="2018">2018</option>
+				<option value="2016">2016</option>
+				<option value="2014">2014</option>
+				<option value="2012">2012</option>
+				<option value="2010">2010</option>
+				<option value="2008">2008</option>
+				<option value="2006">2006</option>
+				<option value="2004">2004</option>
+				<option value="2002">2002</option>
+				<option value="2000">2000</option>
+			</select>
+		<input id="candidateSearchField" type="text" placeholder="Candidate Name">
+		<button id="candidateSearchBtn" type="submit">Search</button>
+		{% comment %}
+		<div id="searchResultsdiv">
+		{% endcomment %}
+			<p id="candidateSearchResults">Results:</p>
+			{% comment %}
+			<form>
+				<button type="submit" class="candSaveBtn" action="{%  %}" method="POST" name="candSaveForm">Save Data</button>
+			</form>
+			{% endcomment %}
+		{% comment %}
+		</div>
+		{% endcomment %}
+	</div>
+
+	<div class="commSearchright">
+		<h3>Campaign Committee Search</h3>
+		<img class="searchImg" src="{% static 'Muqrakr/committee_search.jpg' %}" alt="committee_search" width="475" height="380">
+		<p>Look up a campaign committee by name:</p>
+		<select id="yearCommSearchselect">
+				<option value="Select Election Year">Select Election Year</option>
+				<option value="2020">2020</option>
+				<option value="2018">2018</option>
+				<option value="2016">2016</option>
+				<option value="2014">2014</option>
+				<option value="2012">2012</option>
+				<option value="2010">2010</option>
+				<option value="2008">2008</option>
+				<option value="2006">2006</option>
+				<option value="2004">2004</option>
+				<option value="2002">2002</option>
+				<option value="2000">2000</option>
+			</select>
+		<input id="committeeSearchField" type="text" placeholder="Committee Name">
+		<button id="committeeSearchBtn">Search</button>
+		{% comment %}
+		<div id="searchResultsdiv2">
+		{% endcomment %}
+			<p id="committeeSearchResults">Results:</p>
+			{% comment %}
+			<form>
+				<button type="submit" class="commSaveBtn" action="{%  %}" method="POST" name="commSaveForm">Save Data</button>
+			</form>
+			{% endcomment %}
+		{% comment %}
+		</div>
+		{% endcomment %}
+	</div>
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous"></script>
+	{% comment %}
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+	{% endcomment %}
+	<script type="text/javascript" src="{% static 'Muqrakr/candidateSearchapp.js' %}"></script>
+	<script type="text/javascript" src="{% static 'Muqrakr/committeeSearchapp.js' %}"></script>
+{% endblock %}
