@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 
 import os
 
-from .keys import keys
+from profiles_app.keys import keys
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -29,7 +29,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'muqrakr.pdxstudents.com',
-    'muqrakr.com'
+    'muqrakr.com',
+    '127.0.0.1',
 ]
 
 
